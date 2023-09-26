@@ -90,17 +90,17 @@ public class Manager {
             str.append(oneWord+ "" + ch);
             str.append(" ");
         }
-        return str.toString().substring(0, str.length()-3);
+        return str.toString().substring(0, str.length()-2);
     }
     
     //
     public String formatOneSpace(String line){
-        line = line.trim().toLowerCase();
-        line = line.replace("\\s+"," ");
+        line = line.toLowerCase();
+        line = line.replaceAll("\\s+"," ");
         line = formatSpecial(line, ".");
         line = formatSpecial(line, ",");
-        line = formatSpecial(line, ":");
+        line = formatSpecial(line, ";");
         line = formatSpecial(line, "\"");
-        return line;
+        return line.trim();
     }
 }
