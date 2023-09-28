@@ -8,6 +8,6 @@ import controller.Manager;
 
 public class main {
     public static void main(String[] args) {
-        new Manager().countLine();
+        new Manager().run();
     }
 }
